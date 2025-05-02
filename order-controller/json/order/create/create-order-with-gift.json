@@ -1,0 +1,48 @@
+{
+  "customerOrderId": "ORD123461",
+  "primaryPhone": "0123456789",
+  "customerEmailId": "client.gift@example.com",
+  "orderStatus": "NEW",
+  "firstName": "Lucie",
+  "orderDate": "2025-05-02",
+  "profileId": "PROF006",
+  "lastName": "Dubois",
+  "entryType": "ONLINE",
+  "billToAddress": {
+    "billToAddressId": "BILL123461",
+    "address1": "12 Rue de la République",
+    "city": "Marseille",
+    "state": "PACA",
+    "zipCode": "13001"
+  },
+  "shipToAddress": {
+    "shipToAddressId": "SHIP123461",
+    "address1": "34 Avenue Victor Hugo",
+    "city": "Nice",
+    "state": "PACA",
+    "zipCode": "06000"
+  },
+  "orderLines": [
+    {
+      "lineItemId": "LI123461",
+      "customerOrderId": "ORD123461",
+      "customerSKU": "PROD009",
+      "skuDescription": "Cadeau spécial avec emballage",
+      "status": "NEW"
+    }
+  ],
+  "paymentInfo": {
+    "paymentId": "PAY123461",
+    "paymentStatus": "PENDING",
+    "cardType": "VISA",
+    "authorizedAmount": 121.97,
+    "collectedAmount": 0.0
+  },
+  "charges": {
+    "chargesId": "CHARGE123461",
+    "lineSubTotal": 89.99,
+    "totalCharges": 13.98,
+    "salesTax": 18.00,
+    "grandTotal": 121.97
+  }
+}

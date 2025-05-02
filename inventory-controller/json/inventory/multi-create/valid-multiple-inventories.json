@@ -1,0 +1,17 @@
+[
+  {
+    "skuId": "SKU005",
+    "storeId": "STORE002",
+    "quantity": 25
+  },
+  {
+    "skuId": "SKU006",
+    "storeId": "STORE002",
+    "quantity": 50
+  },
+  {
+    "skuId": "SKU007",
+    "storeId": "STORE003",
+    "quantity": 75
+  }
+]

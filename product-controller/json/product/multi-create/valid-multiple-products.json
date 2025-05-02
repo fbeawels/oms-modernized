@@ -1,0 +1,20 @@
+[
+  {
+    "productId": "PROD001",
+    "name": "Smartphone XYZ",
+    "description": "Smartphone haut de gamme avec écran OLED et appareil photo 108MP",
+    "manuf": "TechCorp"
+  },
+  {
+    "productId": "PROD002",
+    "name": "Laptop ABC",
+    "description": "Ordinateur portable léger avec processeur i7 et 16GB de RAM",
+    "manuf": "TechCorp"
+  },
+  {
+    "productId": "PROD003",
+    "name": "Tablette 123",
+    "description": "Tablette tactile 10 pouces avec stylet inclus",
+    "manuf": "TabletInc"
+  }
+]

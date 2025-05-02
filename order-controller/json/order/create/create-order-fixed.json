@@ -1,0 +1,48 @@
+{
+  "customerOrderId": "ORD123456",
+  "primaryPhone": "0123456789",
+  "customerEmailId": "client@example.com",
+  "orderStatus": "NEW",
+  "firstName": "Jean",
+  "orderDate": "2025-05-02",
+  "profileId": "PROF001",
+  "lastName": "Dupont",
+  "entryType": "ONLINE",
+  "billToAddress": {
+    "billToAddressId": "BILL123456",
+    "address1": "123 Rue Principale",
+    "city": "Paris",
+    "state": "IDF",
+    "zipCode": "75001"
+  },
+  "shipToAddress": {
+    "shipToAddressId": "SHIP123456",
+    "address1": "123 Rue Principale",
+    "city": "Paris",
+    "state": "IDF",
+    "zipCode": "75001"
+  },
+  "orderLines": [
+    {
+      "lineItemId": "LI123456",
+      "customerOrderId": "ORD123456",
+      "customerSKU": "PROD001",
+      "skuDescription": "Produit Premium",
+      "status": "NEW"
+    }
+  ],
+  "paymentInfo": {
+    "paymentId": "PAY123456",
+    "paymentStatus": "PENDING",
+    "cardType": "VISA",
+    "authorizedAmount": 73.17,
+    "collectedAmount": 0.0
+  },
+  "charges": {
+    "chargesId": "CHARGE123456",
+    "lineSubTotal": 59.98,
+    "totalCharges": 5.99,
+    "salesTax": 7.20,
+    "grandTotal": 73.17
+  }
+}

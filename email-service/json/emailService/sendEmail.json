@@ -1,0 +1,8 @@
+{
+  "emailRequestDto": {
+    "salesOrderNumber": "ORD123456",
+    "messageTitle": "Confirmation de commande",
+    "messageBody": "Votre commande a été confirmée et est en cours de traitement.",
+    "emailType": "ORDER_CONFIRMATION"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "customerOrderId": "ORD123459",
+  "primaryPhone": "0123456789",
+  "customerEmailId": "client@example.com",
+  "orderStatus": "NEW",
+  "firstName": "Sophie",
+  "orderDate": "2025-05-02",
+  "profileId": "PROF004",
+  "lastName": "Leroy",
+  "entryType": "ONLINE",
+  "billToAddress": {
+    "billToAddressId": "BILL123459",
+    "address1": "56 Boulevard Haussmann",
+    "city": "Paris",
+    "state": "IDF",
+    "zipCode": "75009"
+  },
+  "shipToAddress": {
+    "shipToAddressId": "SHIP123459",
+    "address1": "56 Boulevard Haussmann",
+    "city": "Paris",
+    "state": "IDF",
+    "zipCode": "75009"
+  },
+  "orderLines": [
+    {
+      "lineItemId": "LI123459-1",
+      "customerOrderId": "ORD123459",
+      "customerSKU": "PROD005",
+      "skuDescription": "Article Premium",
+      "status": "NEW"
+    },
+    {
+      "lineItemId": "LI123459-2",
+      "customerOrderId": "ORD123459",
+      "customerSKU": "PROD006",
+      "skuDescription": "Article Deluxe",
+      "status": "NEW"
+    },
+    {
+      "lineItemId": "LI123459-3",
+      "customerOrderId": "ORD123459",
+      "customerSKU": "PROD007",
+      "skuDescription": "Article Standard",
+      "status": "NEW"
+    }
+  ],
+  "paymentInfo": {
+    "paymentId": "PAY123459",
+    "paymentStatus": "PENDING",
+    "cardType": "AMEX",
+    "authorizedAmount": 203.13,
+    "collectedAmount": 0.0
+  },
+  "charges": {
+    "chargesId": "CHARGE123459",
+    "lineSubTotal": 178.94,
+    "totalCharges": 8.99,
+    "salesTax": 15.20,
+    "grandTotal": 203.13
+  }
+}

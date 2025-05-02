@@ -1,0 +1,46 @@
+{
+  "customerOrderId": "ORD123456",
+  "primaryPhone": "0123456789",
+  "customerEmailId": "client@example.com",
+  "orderStatus": "NEW",
+  "firstName": "Jean",
+  "orderDate": "2025-05-02",
+  "profileId": "PROF001",
+  "lastName": "Dupont",
+  "entryType": "ONLINE",
+  "billToAddress": {
+    "addressLine1": "123 Rue Principale",
+    "city": "Paris",
+    "state": "IDF",
+    "country": "France",
+    "zipCode": "75001"
+  },
+  "shipToAddress": {
+    "addressLine1": "123 Rue Principale",
+    "city": "Paris",
+    "state": "IDF",
+    "country": "France",
+    "zipCode": "75001"
+  },
+  "orderLines": [
+    {
+      "lineItemId": "LI001",
+      "itemId": "PROD001",
+      "quantity": 2,
+      "unitPrice": 29.99,
+      "status": "AVAILABLE"
+    }
+  ],
+  "paymentInfo": {
+    "paymentMethod": "CREDIT_CARD",
+    "cardType": "VISA",
+    "cardNumber": "************1234",
+    "expiryMonth": "12",
+    "expiryYear": "2026"
+  },
+  "charges": {
+    "shippingCharge": 5.99,
+    "taxAmount": 7.20,
+    "totalAmount": 73.17
+  }
+}

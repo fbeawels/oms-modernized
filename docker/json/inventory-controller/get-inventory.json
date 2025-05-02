@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "http://localhost:25000/inventory/inventoryService/fetchInventory",
+    "headers": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "body": {
+      "skuId": "SKU001"
+    }
+  },
+  "expectedResponse": {
+    "status": 200,
+    "bodyContains": {
+      "retVal": {
+        "skuId": "SKU001"
+      }
+    }
+  }
+}

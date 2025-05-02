@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  # Service de base de données H2
+  h2-database:
+    image: oscarfonts/h2
+    container_name: h2-database-storesearch
+    ports:
+      - "8085:81"    # Interface web H2 (port modifié pour éviter les conflits)
+      - "1522:1521"  # Port TCP pour les connexions JDBC (port modifié pour éviter les conflits)
+    environment:
+      - H2_OPTIONS=-ifNotExists
+    volumes:
+      - h2-storesearch-data:/opt/h2-data
+    networks:
+      - oms-network
+
+  # Service Store Search Controller
+  storesearch-controller:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: storesearch-controller
+    ports:
+      - "8084:8082"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:h2:tcp://h2-database-storesearch:1521/storesearch;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      - SPRING_DATASOURCE_USERNAME=sa
+      - SPRING_DATASOURCE_PASSWORD=
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - h2-database
+    networks:
+      - oms-network
+
+networks:
+  oms-network:
+    driver: bridge
+
+volumes:
+  h2-storesearch-data:
+    driver: local

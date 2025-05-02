@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "http://localhost:25000/email/emailService/sendEmail",
+    "headers": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "body": {
+      "emailRequestDto": {
+        "salesOrderNumber": "ORD002",
+        "messageTitle": "Test d envoi d email",
+        "messageBody": "Ceci est un test d envoi d email depuis le service email.",
+        "emailType": "ORDER_CONFIRMATION"
+      }
+    }
+  },
+  "expectedResponse": {
+    "status": 200,
+    "bodyContains": {
+      "retVal": "SUCCESS"
+    }
+  }
+}

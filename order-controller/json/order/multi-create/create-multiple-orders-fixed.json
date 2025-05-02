@@ -1,0 +1,105 @@
+[
+  {
+    "customerOrderId": "ORD123457",
+    "primaryPhone": "0123456789",
+    "customerEmailId": "client1@example.com",
+    "orderStatus": "NEW",
+    "firstName": "Marie",
+    "orderDate": "2025-05-02",
+    "profileId": "PROF002",
+    "lastName": "Martin",
+    "entryType": "ONLINE",
+    "billToAddress": {
+      "billToAddressId": "BILL123457",
+      "address1": "45 Avenue des Champs",
+      "city": "Paris",
+      "state": "IDF",
+      "zipCode": "75008"
+    },
+    "shipToAddress": {
+      "shipToAddressId": "SHIP123457",
+      "address1": "45 Avenue des Champs",
+      "city": "Paris",
+      "state": "IDF",
+      "zipCode": "75008"
+    },
+    "orderLines": [
+      {
+        "lineItemId": "LI123457",
+        "customerOrderId": "ORD123457",
+        "customerSKU": "PROD002",
+        "skuDescription": "Produit Standard",
+        "status": "NEW"
+      }
+    ],
+    "paymentInfo": {
+      "paymentId": "PAY123457",
+      "paymentStatus": "PENDING",
+      "cardType": "MASTERCARD",
+      "authorizedAmount": 65.98,
+      "collectedAmount": 0.0
+    },
+    "charges": {
+      "chargesId": "CHARGE123457",
+      "lineSubTotal": 49.99,
+      "totalCharges": 5.99,
+      "salesTax": 10.00,
+      "grandTotal": 65.98
+    }
+  },
+  {
+    "customerOrderId": "ORD123458",
+    "primaryPhone": "0987654321",
+    "customerEmailId": "client2@example.com",
+    "orderStatus": "NEW",
+    "firstName": "Pierre",
+    "orderDate": "2025-05-02",
+    "profileId": "PROF003",
+    "lastName": "Durand",
+    "entryType": "ONLINE",
+    "billToAddress": {
+      "billToAddressId": "BILL123458",
+      "address1": "78 Rue de la Paix",
+      "city": "Lyon",
+      "state": "RA",
+      "zipCode": "69001"
+    },
+    "shipToAddress": {
+      "shipToAddressId": "SHIP123458",
+      "address1": "78 Rue de la Paix",
+      "city": "Lyon",
+      "state": "RA",
+      "zipCode": "69001"
+    },
+    "orderLines": [
+      {
+        "lineItemId": "LI123458",
+        "customerOrderId": "ORD123458",
+        "customerSKU": "PROD003",
+        "skuDescription": "Produit Économique",
+        "status": "NEW"
+      },
+      {
+        "lineItemId": "LI123459",
+        "customerOrderId": "ORD123458",
+        "customerSKU": "PROD004",
+        "skuDescription": "Produit Premium Plus",
+        "status": "NEW"
+      }
+    ],
+    "paymentInfo": {
+      "paymentId": "PAY123458",
+      "paymentStatus": "PENDING",
+      "cardType": "PAYPAL",
+      "authorizedAmount": 191.95,
+      "collectedAmount": 0.0
+    },
+    "charges": {
+      "chargesId": "CHARGE123458",
+      "lineSubTotal": 159.96,
+      "totalCharges": 7.99,
+      "salesTax": 24.00,
+      "grandTotal": 191.95
+    }
+  }
+]

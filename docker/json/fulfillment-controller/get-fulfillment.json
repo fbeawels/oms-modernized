@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "PATCH",
+    "url": "http://localhost:25000/fulfillment/modify/fulfillment/shipping/items/LI001",
+    "headers": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "body": {
+      "customerOrderId": "ORD001",
+      "orderLines": [
+        {
+          "lineItemId": "LI001",
+          "levelOfService": "STORE_PICKUP"
+        }
+      ]
+    }
+  },
+  "expectedResponse": {
+    "status": 200,
+    "bodyContains": {
+      "customerOrderId": "ORD001",
+      "orderLines": [
+        {
+          "lineItemId": "LI001"
+        }
+      ]
+    }
+  }
+}

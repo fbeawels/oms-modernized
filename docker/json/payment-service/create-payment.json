@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "http://localhost:25000/payment/paymentService/authorize",
+    "headers": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "body": {
+      "authorizationRequestDto": {
+        "cardType": "VISA",
+        "cardNumber": "4111111111111111",
+        "cardExpiryDate": "12/25",
+        "secureCode": "123",
+        "amount": 99.99
+      }
+    }
+  },
+  "expectedResponse": {
+    "status": 200,
+    "bodyContains": {
+      "retVal": {
+        "status": "AUTHORIZED"
+      }
+    }
+  }
+}

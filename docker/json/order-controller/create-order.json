@@ -1,0 +1,59 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "http://localhost:25000/order/order",
+    "headers": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "body": {
+      "customerOrderId": "ORD999",
+      "primaryPhone": "0611223344",
+      "customerEmailId": "new.customer@example.com",
+      "orderStatus": "PENDING",
+      "firstName": "Nouveau",
+      "orderDate": "2025-05-02",
+      "profileId": "PROF999",
+      "lastName": "Client",
+      "entryType": "ONLINE",
+      "billToAddress": {
+        "billToAddressId": "BILL001",
+        "firstName": "Nouveau",
+        "lastName": "Client",
+        "address1": "123 Rue de Test",
+        "city": "Paris",
+        "state": "IDF",
+        "zipCode": "75001"
+      },
+      "shipToAddress": {
+        "shipToAddressId": "SHIP001",
+        "firstName": "Nouveau",
+        "lastName": "Client",
+        "address1": "123 Rue de Test",
+        "city": "Paris",
+        "state": "IDF",
+        "zipCode": "75001"
+      },
+      "paymentInfo": {
+        "paymentId": "PAY001",
+        "paymentStatus": "AUTHORIZED",
+        "cardType": "VISA",
+        "authorizedAmount": 99.99,
+        "collectedAmount": 0.0
+      },
+      "charges": {
+        "chargesId": "CHARGE001",
+        "lineSubTotal": 89.99,
+        "totalCharges": 10.00,
+        "salesTax": 0.0,
+        "grandTotal": 99.99
+      }
+    }
+  },
+  "expectedResponse": {
+    "status": 201,
+    "bodyContains": {
+      "customerOrderId": "ORD999"
+    }
+  }
+}

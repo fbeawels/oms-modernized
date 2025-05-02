@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # Service de base de données H2
+  h2-database:
+    image: oscarfonts/h2
+    container_name: h2-database
+    ports:
+      - "8082:81"    # Interface web H2
+      - "1521:1521"  # Port TCP pour les connexions JDBC
+    environment:
+      - H2_OPTIONS=-ifNotExists
+    volumes:
+      - h2-data:/opt/h2-data
+      - ../../docker/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+      - ../../docker/data.sql:/docker-entrypoint-initdb.d/data.sql:ro
+      - ../../docker/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh:ro
+    networks:
+      - oms-network
+    healthcheck:
+      test: ["CMD", "echo", "select 1", "|", "java", "-cp", "/opt/h2/bin/h2-2.1.214.jar", "org.h2.tools.Shell", "-url", "jdbc:h2:tcp://localhost:1521/test", "-user", "sa", "-password", ""]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+  
+  # Service d'initialisation de la base de données
+  db-init:
+    image: alpine:latest
+    container_name: db-init
+    depends_on:
+      h2-database:
+        condition: service_healthy
+    volumes:
+      - ../../docker/init-db.sh:/init-db.sh:ro
+    command: ["/bin/sh", "-c", "apk add --no-cache openjdk11-jre-headless netcat-openbsd && chmod +x /init-db.sh && /init-db.sh"]
+    networks:
+      - oms-network
+
+  # Service Inventory Controller
+  inventory-controller:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: inventory-controller
+    ports:
+      - "8083:8081"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:h2:tcp://h2-database:1521/inventory;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      - SPRING_DATASOURCE_USERNAME=sa
+      - SPRING_DATASOURCE_PASSWORD=
+    depends_on:
+      - h2-database
+      - db-init
+    networks:
+      - oms-network
+
+networks:
+  oms-network:
+    driver: bridge
+
+volumes:
+  h2-data:
+    driver: local

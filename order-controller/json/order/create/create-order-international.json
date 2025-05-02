@@ -1,0 +1,48 @@
+{
+  "customerOrderId": "ORD123460",
+  "primaryPhone": "+4930123456789",
+  "customerEmailId": "client.international@example.com",
+  "orderStatus": "NEW",
+  "firstName": "Hans",
+  "orderDate": "2025-05-02",
+  "profileId": "PROF005",
+  "lastName": "Schmidt",
+  "entryType": "ONLINE",
+  "billToAddress": {
+    "billToAddressId": "BILL123460",
+    "address1": "Unter den Linden 77",
+    "city": "Berlin",
+    "state": "BE",
+    "zipCode": "10117"
+  },
+  "shipToAddress": {
+    "shipToAddressId": "SHIP123460",
+    "address1": "Unter den Linden 77",
+    "city": "Berlin",
+    "state": "BE",
+    "zipCode": "10117"
+  },
+  "orderLines": [
+    {
+      "lineItemId": "LI123460",
+      "customerOrderId": "ORD123460",
+      "customerSKU": "PROD008",
+      "skuDescription": "Produit International",
+      "status": "NEW"
+    }
+  ],
+  "paymentInfo": {
+    "paymentId": "PAY123460",
+    "paymentStatus": "PENDING",
+    "cardType": "PAYPAL",
+    "authorizedAmount": 171.98,
+    "collectedAmount": 0.0
+  },
+  "charges": {
+    "chargesId": "CHARGE123460",
+    "lineSubTotal": 129.99,
+    "totalCharges": 15.99,
+    "salesTax": 26.00,
+    "grandTotal": 171.98
+  }
+}

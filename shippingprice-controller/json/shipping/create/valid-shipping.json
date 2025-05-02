@@ -1,0 +1,6 @@
+{
+  "skuId": "SKU001",
+  "standardShipping": 5.99,
+  "expeditedShipping": 9.99,
+  "expressShipping": 14.99
+}

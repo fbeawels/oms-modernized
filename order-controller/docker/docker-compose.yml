@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  # Service de base de données H2
+  h2-database-order:
+    image: oscarfonts/h2
+    container_name: h2-database-order
+    ports:
+      - "8085:81"    # Interface web H2
+      - "1522:1521"  # Port TCP pour les connexions JDBC
+    environment:
+      - H2_OPTIONS=-ifNotExists
+    volumes:
+      - h2-data:/opt/h2-data
+    networks:
+      - oms-network
+
+  # Service Order Controller
+  order-controller:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: order-controller
+    ports:
+      - "8084:8082"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:h2:tcp://h2-database-order:1521/order;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      - SPRING_DATASOURCE_USERNAME=sa
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - LOGGING_LEVEL_COM_OMS=DEBUG
+    depends_on:
+      - h2-database-order
+    networks:
+      - oms-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8082/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  oms-network:
+    driver: bridge
+
+volumes:
+  h2-data:
+    driver: local

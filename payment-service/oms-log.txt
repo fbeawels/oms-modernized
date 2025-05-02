@@ -1,0 +1,33 @@
+2025-05-02 14:48:19.713  INFO 1463131 --- [main] c.oms.paymentservice.PaymentServiceApp   : Starting PaymentServiceApp v1.0-SNAPSHOT using Java 11.0.27 on adelaide with PID 1463131 (/home/franck/Sandbox/02-AppMod/oms-modernized/payment-service/target/PaymentService-1.0-SNAPSHOT.jar started by franck in /home/franck/Sandbox/02-AppMod/oms-modernized/payment-service)
+2025-05-02 14:48:19.715 DEBUG 1463131 --- [main] c.oms.paymentservice.PaymentServiceApp   : Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-05-02 14:48:19.715  INFO 1463131 --- [main] c.oms.paymentservice.PaymentServiceApp   : No active profile set, falling back to 1 default profile: "default"
+2025-05-02 14:48:20.009  INFO 1463131 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-02 14:48:20.016  INFO 1463131 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2025-05-02 14:48:20.466  INFO 1463131 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2025-05-02 14:48:20.473  INFO 1463131 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-02 14:48:20.473  INFO 1463131 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-05-02 14:48:20.515  INFO 1463131 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-02 14:48:20.515  INFO 1463131 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 753 ms
+2025-05-02 14:48:20.533  INFO 1463131 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-05-02 14:48:20.707  INFO 1463131 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-05-02 14:48:20.806  INFO 1463131 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-02 14:48:20.857  INFO 1463131 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-05-02 14:48:20.964  INFO 1463131 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-05-02 14:48:21.117  INFO 1463131 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-05-02 14:48:21.530  INFO 1463131 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-05-02 14:48:21.537  INFO 1463131 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-02 14:48:21.669  WARN 1463131 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-02 14:48:22.396  INFO 1463131 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2025-05-02 14:48:22.410  INFO 1463131 --- [main] c.oms.paymentservice.PaymentServiceApp   : Started PaymentServiceApp in 2.956 seconds (JVM running for 3.186)
+2025-05-02 14:48:48.597  INFO 1463131 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-02 14:48:48.597  INFO 1463131 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-02 14:48:48.598  INFO 1463131 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+com.oms.service.PaymentService
+com.oms.service.PaymentService
+com.oms.service.DinersPaymentService
+com.oms.service.DinersPaymentService
+2025-05-02 14:49:22.944  INFO 1463131 --- [http-nio-8082-exec-8] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [sidebar:state=true;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2025-05-02 14:49:23.232  INFO 1463131 --- [http-nio-8082-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 115 ms
+2025-05-02 14:49:49.671  INFO 1463131 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-02 14:49:49.672  INFO 1463131 --- [SpringApplicationShutdownHook] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'

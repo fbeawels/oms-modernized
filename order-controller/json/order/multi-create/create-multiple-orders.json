@@ -1,0 +1,98 @@
+[
+  {
+    "customerOrderId": "ORD123457",
+    "primaryPhone": "0123456789",
+    "customerEmailId": "client1@example.com",
+    "orderStatus": "NEW",
+    "firstName": "Marie",
+    "orderDate": "2025-05-02",
+    "profileId": "PROF002",
+    "lastName": "Martin",
+    "entryType": "ONLINE",
+    "billToAddress": {
+      "addressLine1": "45 Avenue des Champs",
+      "city": "Paris",
+      "state": "IDF",
+      "country": "France",
+      "zipCode": "75008"
+    },
+    "shipToAddress": {
+      "addressLine1": "45 Avenue des Champs",
+      "city": "Paris",
+      "state": "IDF",
+      "country": "France",
+      "zipCode": "75008"
+    },
+    "orderLines": [
+      {
+        "lineItemId": "LI002",
+        "itemId": "PROD002",
+        "quantity": 1,
+        "unitPrice": 49.99,
+        "status": "AVAILABLE"
+      }
+    ],
+    "paymentInfo": {
+      "paymentMethod": "CREDIT_CARD",
+      "cardType": "MASTERCARD",
+      "cardNumber": "************5678",
+      "expiryMonth": "10",
+      "expiryYear": "2027"
+    },
+    "charges": {
+      "shippingCharge": 5.99,
+      "taxAmount": 10.00,
+      "totalAmount": 65.98
+    }
+  },
+  {
+    "customerOrderId": "ORD123458",
+    "primaryPhone": "0987654321",
+    "customerEmailId": "client2@example.com",
+    "orderStatus": "NEW",
+    "firstName": "Pierre",
+    "orderDate": "2025-05-02",
+    "profileId": "PROF003",
+    "lastName": "Durand",
+    "entryType": "ONLINE",
+    "billToAddress": {
+      "addressLine1": "78 Rue de la Paix",
+      "city": "Lyon",
+      "state": "RA",
+      "country": "France",
+      "zipCode": "69001"
+    },
+    "shipToAddress": {
+      "addressLine1": "78 Rue de la Paix",
+      "city": "Lyon",
+      "state": "RA",
+      "country": "France",
+      "zipCode": "69001"
+    },
+    "orderLines": [
+      {
+        "lineItemId": "LI003",
+        "itemId": "PROD003",
+        "quantity": 3,
+        "unitPrice": 19.99,
+        "status": "AVAILABLE"
+      },
+      {
+        "lineItemId": "LI004",
+        "itemId": "PROD004",
+        "quantity": 1,
+        "unitPrice": 99.99,
+        "status": "AVAILABLE"
+      }
+    ],
+    "paymentInfo": {
+      "paymentMethod": "PAYPAL",
+      "accountEmail": "pierre.durand@example.com"
+    },
+    "charges": {
+      "shippingCharge": 7.99,
+      "taxAmount": 24.00,
+      "totalAmount": 191.95
+    }
+  }
+]

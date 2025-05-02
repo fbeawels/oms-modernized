@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  # Service de base de données H2
+  h2-database:
+    image: oscarfonts/h2
+    container_name: h2-database
+    ports:
+      - "8087:81"    # Interface web H2
+      - "1522:1521"  # Port TCP pour les connexions JDBC
+    environment:
+      - H2_OPTIONS=-ifNotExists
+    volumes:
+      - h2-data:/opt/h2-data
+    networks:
+      - oms-network
+
+  # Service Product Controller
+  product-controller:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: product-controller
+    ports:
+      - "8085:8086"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:h2:tcp://h2-database:1521/product;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      - SPRING_DATASOURCE_USERNAME=sa
+      - SPRING_DATASOURCE_PASSWORD=
+    depends_on:
+      - h2-database
+    networks:
+      - oms-network
+
+networks:
+  oms-network:
+    driver: bridge
+
+volumes:
+  h2-data:
+    driver: local

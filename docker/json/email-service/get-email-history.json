@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "http://localhost:25000/email/email/history/EMAIL001",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "expectedResponse": {
+    "status": 200,
+    "body": {
+      "emailId": "EMAIL001",
+      "customerOrderId": "ORD001",
+      "emailTo": "jean.dupont@example.com",
+      "emailSubject": "Confirmation de votre commande #ORD001",
+      "emailBody": "Cher Jean Dupont,\n\nNous vous confirmons la réception de votre commande #ORD001.\n\nMerci pour votre achat!",
+      "sentDate": "2025-05-01T10:30:00",
+      "status": "SENT"
+    }
+  }
+}

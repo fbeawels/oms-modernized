@@ -1,0 +1,38 @@
+{
+  "customerOrderId": "ORD12345",
+  "primaryPhone": "1234567890",
+  "customerEmailId": "client@example.com",
+  "orderStatus": "PROCESSING",
+  "firstName": "John",
+  "orderDate": "2025-05-01",
+  "profileId": "PROF123",
+  "lastName": "Doe",
+  "entryType": "WEB",
+  "paymentInfo": {
+    "paymentId": "PAY123",
+    "paymentStatus": "AUTHORIZED",
+    "cardType": "VISA",
+    "authorizedAmount": 100.00,
+    "collectedAmount": 0.00
+  },
+  "orderLines": [
+    {
+      "lineItemId": "ITEM123",
+      "customerOrderId": "ORD12345",
+      "shipNode": "STORE001",
+      "shipNodeDesc": "Store Paris",
+      "levelOfService": "STANDARD",
+      "primeLineNo": "1",
+      "subLineNo": "1",
+      "customerSKU": "SKU001",
+      "skuDescription": "Smartphone",
+      "estArrivalDate": "2025-05-10",
+      "status": "PROCESSING",
+      "reshippedBefore": "NO",
+      "charges": {
+        "lineChargeId": "LC123",
+        "totalCharges": 95.00
+      }
+    }
+  ]
+}

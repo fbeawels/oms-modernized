@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMS Microservices API Documentation</title>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #1b1b1b;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            height: calc(100vh - 60px);
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f5f5f5;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .content {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+        .swagger-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .swagger-container.active {
+            display: block;
+        }
+        .service-link {
+            display: block;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #e9e9e9;
+            text-decoration: none;
+            color: #333;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .service-link:hover {
+            background-color: #d5d5d5;
+        }
+        .service-link.active {
+            background-color: #4990e2;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OMS Microservices API Documentation</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Services</h3>
+            <a class="service-link" onclick="showSwagger('inventory')">Inventory Controller</a>
+            <a class="service-link" onclick="showSwagger('store')">Store Search Controller</a>
+            <a class="service-link" onclick="showSwagger('payment')">Payment Service</a>
+            <a class="service-link" onclick="showSwagger('shipping')">Shipping Price Controller</a>
+            <a class="service-link" onclick="showSwagger('order')">Order Controller</a>
+            <a class="service-link" onclick="showSwagger('product')">Product Controller</a>
+            <a class="service-link" onclick="showSwagger('fulfillment')">Fulfillment Controller</a>
+            <a class="service-link" onclick="showSwagger('email')">Email Service</a>
+        </div>
+        <div class="content">
+            <div id="inventory-swagger" class="swagger-container"></div>
+            <div id="store-swagger" class="swagger-container"></div>
+            <div id="payment-swagger" class="swagger-container"></div>
+            <div id="shipping-swagger" class="swagger-container"></div>
+            <div id="order-swagger" class="swagger-container"></div>
+            <div id="product-swagger" class="swagger-container"></div>
+            <div id="fulfillment-swagger" class="swagger-container"></div>
+            <div id="email-swagger" class="swagger-container"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js"></script>
+    <script>
+        const services = [
+            { id: 'inventory', url: '/api-docs/inventory' },
+            { id: 'store', url: '/api-docs/store' },
+            { id: 'payment', url: '/api-docs/payment' },
+            { id: 'shipping', url: '/api-docs/shipping' },
+            { id: 'order', url: '/api-docs/order' },
+            { id: 'product', url: '/api-docs/product' },
+            { id: 'fulfillment', url: '/api-docs/fulfillment' },
+            { id: 'email', url: '/api-docs/email' }
+        ];
+
+        // Initialize Swagger UI for each service
+        services.forEach(service => {
+            window[`${service.id}UI`] = SwaggerUIBundle({
+                url: service.url,
+                dom_id: `#${service.id}-swagger`,
+                deepLinking: true,
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIBundle.SwaggerUIStandalonePreset
+                ],
+                layout: "BaseLayout",
+                docExpansion: "list",
+                defaultModelsExpandDepth: 1,
+                defaultModelExpandDepth: 1
+            });
+        });
+
+        // Function to show the selected Swagger UI
+        function showSwagger(serviceId) {
+            // Hide all swagger containers
+            document.querySelectorAll('.swagger-container').forEach(container => {
+                container.classList.remove('active');
+            });
+            
+            // Show the selected swagger container
+            document.getElementById(`${serviceId}-swagger`).classList.add('active');
+            
+            // Update active link in sidebar
+            document.querySelectorAll('.service-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Find the clicked link and add active class
+            const links = document.querySelectorAll('.service-link');
+            for (let i = 0; i < links.length; i++) {
+                if (links[i].getAttribute('onclick').includes(serviceId)) {
+                    links[i].classList.add('active');
+                    break;
+                }
+            }
+        }
+
+        // Show the first service by default
+        showSwagger('inventory');
+    </script>
+</body>
+</html>

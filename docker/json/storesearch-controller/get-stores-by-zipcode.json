@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "http://localhost:25000/store/75001",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "expectedResponse": {
+    "status": 200,
+    "bodyContains": [
+      "STORE001"
+    ]
+  }
+}

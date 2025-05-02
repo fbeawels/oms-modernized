@@ -1,0 +1,14 @@
+{
+  "authorizationRequestDto": {
+    "cardType": "DINERS",
+    "cardNumber": "3600000000000008",
+    "expiryMonth": "12",
+    "expiryYear": "2025",
+    "cvv": "123",
+    "amount": 200.75,
+    "currency": "EUR",
+    "orderId": "ORD789012",
+    "customerName": "Jane Smith",
+    "authorizationId": "AUTH456789"
+  }
+}

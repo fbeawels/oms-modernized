@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "http://localhost:25000/payment/payment/PAY001",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "expectedResponse": {
+    "status": 200,
+    "body": {
+      "paymentId": "PAY001",
+      "paymentStatus": "COMPLETED",
+      "cardType": "VISA",
+      "authorizedAmount": 73.17,
+      "collectedAmount": 73.17
+    }
+  }
+}

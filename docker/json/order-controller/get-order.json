@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "http://localhost:25000/order/order/ORD001",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "expectedResponse": {
+    "status": 200,
+    "body": {
+      "customerOrderId": "ORD001",
+      "primaryPhone": "0123456789",
+      "customerEmailId": "jean.dupont@example.com",
+      "orderStatus": "COMPLETED",
+      "firstName": "Jean",
+      "orderDate": "2025-05-01",
+      "profileId": "PROF001",
+      "lastName": "Dupont",
+      "entryType": "ONLINE",
+      "billToAddressId": "BILL001",
+      "shipToAddressId": "SHIP001",
+      "paymentId": "PAY001",
+      "chargesId": "CHARGE001"
+    }
+  }
+}

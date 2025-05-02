@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "http://localhost:25000/product/product/SKU001",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "expectedResponse": {
+    "status": 200,
+    "body": {
+      "productId": "SKU001",
+      "name": "Smartphone",
+      "description": "Smartphone haut de gamme",
+      "manufacturer": "TechCorp"
+    }
+  }
+}

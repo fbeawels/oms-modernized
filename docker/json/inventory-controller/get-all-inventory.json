@@ -1,0 +1,23 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "http://localhost:25000/inventory/inventory",
+    "headers": {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    "body": {
+      "skuId": "SKU999",
+      "storeId": "STORE001",
+      "quantity": 50
+    }
+  },
+  "expectedResponse": {
+    "status": 200,
+    "bodyContains": {
+      "skuId": "SKU999",
+      "storeId": "STORE001",
+      "quantity": 50
+    }
+  }
+}

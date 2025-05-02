@@ -1,0 +1,21 @@
+Données de test initialisées avec 4 magasins
+Données de test initialisées avec 4 magasins
+Données de test initialisées avec 4 magasins
+com.oms.controller.StoreSearchController
+com.oms.service.StoreSearchService - Recherche des magasins pour le code postal : 75001
+Données de test initialisées avec 4 magasins
+com.oms.controller.StoreSearchController
+com.oms.service.StoreSearchService - Recherche des magasins pour le code postal : 75001
+Erreur lors de la recherche des magasins : could not prepare statement; SQL [select store0_.store_id as store_id1_10_, store0_.address as address2_10_, store0_.city as city3_10_, store0_.name as name4_10_, store0_.state as state5_10_, store0_.zip_code as zip_code6_10_ from stores store0_ where store0_.zip_code=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+Données de test initialisées avec 4 magasins
+com.oms.controller.StoreSearchController
+com.oms.service.StoreSearchService - Recherche des magasins pour le code postal : 75001
+Erreur lors de la recherche des magasins : could not prepare statement; SQL [select store0_.store_id as store_id1_10_, store0_.address as address2_10_, store0_.city as city3_10_, store0_.name as name4_10_, store0_.state as state5_10_, store0_.zip_code as zip_code6_10_ from stores store0_ where store0_.zip_code=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+com.oms.controller.StoreSearchController
+com.oms.service.StoreSearchService - Recherche des magasins pour le code postal : 75001
+com.oms.controller.StoreSearchController
+com.oms.service.StoreSearchService - Recherche des magasins pour le code postal : 92100
+com.oms.controller.StoreSearchController
+com.oms.service.StoreSearchService - Recherche des magasins pour le code postal : 75001
+com.oms.controller.StoreSearchController
+com.oms.service.StoreSearchService - Recherche des magasins pour le code postal : 92100
